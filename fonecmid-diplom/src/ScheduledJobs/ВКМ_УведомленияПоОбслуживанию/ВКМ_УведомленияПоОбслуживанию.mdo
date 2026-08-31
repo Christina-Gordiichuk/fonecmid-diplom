@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="73ec1cf7-2fd6-4f8b-8c8e-d2f2f3070f8f">
+  <name>ВКМ_УведомленияПоОбслуживанию</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уведомления по обслуживанию</value>
+  </synonym>
+  <methodName>CommonModule.ВКМ_ОбслуживаниеКлиентов.ВКМ_ОбработатьРегламентныеУведомления</methodName>
+  <description>Регламентная отправка уведомлений клиентам после оказания услуг</description>
+  <use>true</use>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

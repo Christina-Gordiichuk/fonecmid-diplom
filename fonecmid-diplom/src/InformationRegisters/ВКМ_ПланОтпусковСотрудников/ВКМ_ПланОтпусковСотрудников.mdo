@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="104fee39-3788-4e6b-90c2-d74c7c6628e6">
+  <producedTypes>
+    <selectionType typeId="42b7e2a7-2fda-449f-bc7f-4ebf4d1f5831" valueTypeId="0997f76e-29e4-4b6a-9a69-c12b24704ab2"/>
+    <listType typeId="f79f0211-2e5f-4696-9668-4af1f2e95a9f" valueTypeId="3cc2ec99-924d-4ce7-89ca-cbb186327ca7"/>
+    <managerType typeId="6f1d7dff-0470-4242-a1f2-0409b6254f51" valueTypeId="4e2fb3ae-1001-49a4-95a0-bd1839ee35f9"/>
+    <recordSetType typeId="b7c5f8a6-3982-4266-a1f8-3e754369f86d" valueTypeId="49a421d5-bf15-4704-a2d6-e09fa5ce3bf3"/>
+    <recordKeyType typeId="94053d57-165a-4c2e-b2c6-8fc87f9472ad" valueTypeId="797767ff-50c5-43d8-a71f-57b5ad5b0888"/>
+    <recordType typeId="74a573ea-e929-4327-a2be-5d52b9d7dd21" valueTypeId="6f373d82-74fc-4e53-866d-92dd0b7a35f9"/>
+    <recordManagerType typeId="3ea49568-b05d-4f54-bf7b-0b9bbf6e0cab" valueTypeId="d1793248-7f17-4236-b31d-c75f6a070c9f"/>
+  </producedTypes>
+  <name>ВКМ_ПланОтпусковСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>План отпусков сотрудников</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <periodicity>WithinDay</periodicity>
+  <writeMode>Independent</writeMode>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="38cfb6cb-5a49-4f77-a03a-8ca3d09d58a6">
+    <name>ВКМ_Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ebb757fb-fbda-44d5-a4f8-492f4123ce28">
+    <name>ВКМ_ДокументОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ-основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ВКМ_ГрафикОтпусков</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <resources uuid="4a0de18d-9ea9-42d9-a698-8c72e916c59b">
+    <name>ВКМ_ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="d37c9a92-a734-4913-95c7-edf14a60cbac">
+    <name>ВКМ_ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="91af7058-a912-4c9d-aef8-d6f8317259df">
+    <name>ВКМ_Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+</mdclass:InformationRegister>

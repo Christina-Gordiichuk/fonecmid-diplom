@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9c21a8f8-7829-4b3e-bf5b-e45211f31f2f">
+  <producedTypes>
+    <managerType typeId="16176107-58da-4ff8-8f78-418d5f24a45f" valueTypeId="4914ca5a-7f80-4bb4-a389-62362f4fef85"/>
+    <valueManagerType typeId="8025cde5-f7cb-4cb5-a4a8-d0e670fbe610" valueTypeId="ea3eea5d-ab2f-4406-a41f-cf87661b7a0b"/>
+    <valueKeyType typeId="ea6a0947-b7f5-50f4-94fe-61bbca23b4a7" valueTypeId="0ac106eb-9edf-538f-bfe8-f1e6dc6f95ce"/>
+  </producedTypes>
+  <name>ВКМ_ИдентификаторЧатаTelegram</name>
+  <synonym>
+    <key>ru</key>
+    <value>Идентификатор чата Telegram</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>50</length>
+    </stringQualifiers>
+  </type>
+  <toolTip>
+    <key>ru</key>
+    <value>Идентификатор чата для отправки уведомлений Telegram</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

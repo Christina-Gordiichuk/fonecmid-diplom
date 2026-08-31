@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8abfa0f6-03ef-44b2-878f-046f06181541">
+  <name>ВКМ_ОбслуживаниеКлиентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обслуживание клиентов</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.ЗаказПокупателя</content>
+  <content>Document.РеализацияТоваровУслуг</content>
+  <content>Document.ВКМ_ОбслуживаниеКлиента</content>
+  <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
+  <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
+  <content>Report.ВКМ_АнализОбслуживанияКлиентов</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
+  <content>InformationRegister.ВКМ_МаршрутизацияTelegramКонтрагентов</content>
+  <content>InformationRegister.ВКМ_ОчередьУведомленийTelegram</content>
+  <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
+  <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
+  <content>Constant.ВКМ_ТокенTelegramБота</content>
+  <content>Constant.ВКМ_ИдентификаторЧатаTelegram</content>
+  <content>ScheduledJob.ВКМ_УведомленияПоОбслуживанию</content>
+</mdclass:Subsystem>

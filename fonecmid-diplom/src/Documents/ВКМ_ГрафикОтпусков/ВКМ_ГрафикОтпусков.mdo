@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0261f6cb-a24d-4e5d-a66e-e90d56aa40bf">
+  <name>ВКМ_ГрафикОтпусков</name>
+  <synonym><key>ru</key><value>График отпусков</value></synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ВКМ_ГрафикОтпусков.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="63dd5ff3-4902-4332-9df5-b9084c00e9a7">
+    <name>ВКМ_Сотрудник</name>
+    <synonym><key>ru</key><value>Сотрудник</value></synonym>
+    <type><types>CatalogRef.Пользователи</types></type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="75f96ac8-cdb1-4789-9693-0c0f3d95d4a7">
+    <name>ВКМ_ДатаНачала</name>
+    <synonym><key>ru</key><value>Дата начала</value></synonym>
+    <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="f4d5c5f8-82fd-4e7a-a6f1-bb6a58d631ce">
+    <name>ВКМ_ДатаОкончания</name>
+    <synonym><key>ru</key><value>Дата окончания</value></synonym>
+    <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="2ad2f027-7499-4cf8-bb7e-290643f3c4eb">
+    <name>Комментарий</name>
+    <synonym><key>ru</key><value>Комментарий</value></synonym>
+    <type><types>String</types><stringQualifiers><length>200</length></stringQualifiers></type>
+  </attributes>
+</mdclass:Document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="44fd2f2d-8e15-4cb4-892f-47fe1e63af85">
+  <producedTypes>
+    <selectionType typeId="f8a2f247-8a37-4be8-baea-54ed59717d5e" valueTypeId="22de95bd-c6fe-4c86-99a0-16a47673944d"/>
+    <listType typeId="0f3caf31-eebd-49c6-ac13-045f7924df20" valueTypeId="57d8d6dd-6f86-43fb-a8c9-c4e6565dcc72"/>
+    <managerType typeId="92b6e42f-b3d4-4248-a176-7b8591f8ed53" valueTypeId="4faa7182-652f-4e4a-a9ca-24b5d0ee8104"/>
+    <recordSetType typeId="ef0fd6f4-6135-4f57-9236-c0db66354f39" valueTypeId="f95d5366-a711-4e93-8170-e5c3d615c83f"/>
+    <recordKeyType typeId="5c9dd2df-1309-40ab-9101-a1fdd884c4a6" valueTypeId="54184dd6-2f37-4ac5-8576-17077a9afaf3"/>
+    <recordType typeId="fc6bd362-4a2c-4622-ad4d-f6df9269c52e" valueTypeId="9f317b37-5f93-42cf-8d46-b17f6fbec55c"/>
+    <recordManagerType typeId="e557bbca-9ac2-4631-b2e0-dca634397f38" valueTypeId="a8aa2f68-d7d8-4a88-b876-9fed0862f31f"/>
+  </producedTypes>
+  <name>ВКМ_МаршрутизацияTelegramКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Маршрутизация Telegram контрагентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <periodicity>WithinSecond</periodicity>
+  <writeMode>Independent</writeMode>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="50be7f4c-ef65-4b16-ba8e-04d039433592">
+    <name>ВКМ_Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <resources uuid="546ea551-5452-4496-ad94-0f0d9c87052b">
+    <name>ВКМ_ИдентификаторЧата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор чата</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="38a5e249-cc34-4a8d-a29a-0b6ef7feba5a">
+    <name>ВКМ_Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+</mdclass:InformationRegister>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7e0eb3c3-d0db-4f67-af47-1eaeb4f76d54">
+  <producedTypes>
+    <selectionType typeId="ad57b5f2-c873-486a-94cb-810fcf5dcc8f" valueTypeId="4be64517-f6ae-4f3b-90ad-40a2ad4fa95f"/>
+    <listType typeId="0f4d66e4-4dc0-4f64-83ea-17f194ded490" valueTypeId="184e4664-ed4d-4d85-936b-180a5e770ec8"/>
+    <managerType typeId="df0c52bf-810e-4526-a3f6-8031f3148bc0" valueTypeId="7ca22f5d-e248-451a-bf26-4d8e0212ff37"/>
+    <recordSetType typeId="de369f91-7f4f-4a11-ad40-f61506173f8c" valueTypeId="7f59eb17-fb95-4d7d-8ca0-d5b588ecf232"/>
+    <recordKeyType typeId="f7a9eb9f-b2be-42df-bad3-b6577093b337" valueTypeId="45d7488c-e5f6-46b5-a5bf-2fddcece8b99"/>
+    <recordType typeId="790bd0b2-cb54-465f-b185-3775a236d0df" valueTypeId="8e7ce8c0-b193-41a4-9e03-5852eabebf91"/>
+  </producedTypes>
+  <name>ВКМ_НачисленияСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисления сотрудников</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="b2450488-3d31-41ff-9855-2f8dcbfd7771">
+    <name>ВКМ_СуммаНачисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма начисления</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="7694da16-bc0d-4938-b180-114493628687">
+    <name>ВКМ_Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6ece1d58-5bc6-4aef-83d6-307d3be2eb71">
+    <name>ВКМ_ВидНачисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид начисления</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

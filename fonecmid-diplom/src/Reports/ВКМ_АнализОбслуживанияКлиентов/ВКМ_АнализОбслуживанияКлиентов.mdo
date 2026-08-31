@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="23e02d9f-f1f0-4a42-ac03-2e20ef6f4d70">
+  <producedTypes>
+    <objectType typeId="7892ce60-a98f-49e2-8ca8-4235d4316b3a" valueTypeId="9a66c113-6f06-4f11-8f87-5f520690c589"/>
+    <managerType typeId="320f2f7f-d560-4a71-9de9-34efcddf8712" valueTypeId="8ec3c8cc-8cf2-4304-a5f9-9dcf160544db"/>
+  </producedTypes>
+  <name>ВКМ_АнализОбслуживанияКлиентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ обслуживания клиентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ВКМ_АнализОбслуживанияКлиентов.Template.ВКМ_ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="9d1f4ac5-8e5d-4f6a-91d5-0f0f1302e19a">
+    <name>ВКМ_ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>
