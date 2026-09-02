@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаШапка</name>
+    <id>1</id>
+    <items xsi:type="form:FormField">
+      <name>Номер</name>
+      <id>2</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.Number</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Дата</name>
+      <id>3</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.Date</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_Год</name>
+      <id>4</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_Год</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <united>true</united>
+    </extInfo>
+  </items>
+  <items xsi:type="form:Table">
+    <name>ВКМ_ОтпускаСотрудников</name>
+    <id>10</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_ОтпускаСотрудников</segments>
+    </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>ВКМ_ОтпускаСотрудниковПриИзменении</name>
+    </handlers>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ОтпускаСотрудниковВКМ_Сотрудник</name>
+      <id>11</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ОтпускаСотрудников.ВКМ_Сотрудник</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ОтпускаСотрудниковВКМ_ДатаНачала</name>
+      <id>12</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ОтпускаСотрудников.ВКМ_ДатаНачала</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ОтпускаСотрудниковВКМ_ДатаОкончания</name>
+      <id>13</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ОтпускаСотрудников.ВКМ_ДатаОкончания</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ВКМ_Комментарий</name>
+    <id>20</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_Комментарий</segments>
+    </dataPath>
+    <type>InputField</type>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>ФормаВКМ_АнализГрафика</name>
+      <id>30</id>
+      <commandName>Form.Command.ВКМ_АнализГрафика</commandName>
+      <representation>Auto</representation>
+      <placementArea>UserCmds</placementArea>
+    </items>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <autoTitle>true</autoTitle>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DocumentObject.ВКМ_ГрафикОтпусков</types>
+    </valueType>
+    <main>true</main>
+    <savedData>true</savedData>
+  </attributes>
+  <formCommands>
+    <name>ВКМ_АнализГрафика</name>
+    <title>
+      <key>ru</key>
+      <value>Анализ графика</value>
+    </title>
+    <id>1</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ВКМ_АнализГрафика</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <extInfo xsi:type="form:DocumentFormExtInfo">
+    <handlers>
+      <event>AfterWrite</event>
+      <name>ПослеЗаписи</name>
+    </handlers>
+  </extInfo>
+</form:Form>

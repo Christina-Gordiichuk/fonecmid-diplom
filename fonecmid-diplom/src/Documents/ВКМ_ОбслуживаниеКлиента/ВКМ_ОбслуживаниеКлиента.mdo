@@ -24,8 +24,8 @@
   <defaultListForm>Document.ВКМ_ОбслуживаниеКлиента.Form.ФормаСписка</defaultListForm>
   <registerRecords>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</registerRecords>
   <registerRecords>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</registerRecords>
-  <postInPrivilegedMode>true</postInPrivilegedMode>
-  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <postInPrivilegedMode>false</postInPrivilegedMode>
+  <unpostInPrivilegedMode>false</unpostInPrivilegedMode>
   <attributes uuid="43afeb15-fc64-48f7-9f4a-77e21c0f79ac">
     <name>Организация</name>
     <synonym><key>ru</key><value>Организация</value></synonym>
@@ -87,6 +87,39 @@
     <type><types>String</types><stringQualifiers/></type>
     <fillValue xsi:type="core:StringValue"><value></value></fillValue>
   </attributes>
+  <attributes uuid="3a7c91e2-6b14-4d88-9f21-0c8e5a4b7d16">
+    <name>ВКМ_ДатаПроведенияРабот</name>
+    <synonym><key>ru</key><value>Дата проведения работ</value></synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers>
+    </type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="4b8d02f3-7c25-4e99-a032-1d9f6b5c8e27">
+    <name>ВКМ_ВремяНачалаРаботПлан</name>
+    <synonym><key>ru</key><value>Время начала работ (план)</value></synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers><dateFractions>Time</dateFractions></dateQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="5c9e13a4-8d36-4f00-b143-2e0a7c6d9f38">
+    <name>ВКМ_ВремяОкончанияРаботПлан</name>
+    <synonym><key>ru</key><value>Время окончания работ (план)</value></synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers><dateFractions>Time</dateFractions></dateQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="6d0f24b5-9e47-4011-c254-3f1b8d7e0a49">
+    <name>ВКМ_ОписаниеПроблемы</name>
+    <synonym><key>ru</key><value>Описание проблемы</value></synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+  </attributes>
   <forms uuid="d90e30e5-c1c3-4747-af56-2c8f6a744dca">
     <name>ФормаДокумента</name>
     <synonym><key>ru</key><value>Форма документа</value></synonym>
@@ -123,6 +156,21 @@
       <name>ВКМ_Сумма</name>
       <synonym><key>ru</key><value>Сумма</value></synonym>
       <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+    </attributes>
+    <attributes uuid="7e1a35c6-0f58-4122-d365-4a2c9e8f1b50">
+      <name>ВКМ_ОписаниеРабот</name>
+      <synonym><key>ru</key><value>Описание работ</value></synonym>
+      <type><types>String</types><stringQualifiers/></type>
+    </attributes>
+    <attributes uuid="8f2b46d7-1069-4233-e476-5b3d0f9a2c61">
+      <name>ВКМ_ФактическиПотраченоЧасов</name>
+      <synonym><key>ru</key><value>Фактически потрачено часов</value></synonym>
+      <type><types>Number</types><numberQualifiers><precision>10</precision><scale>2</scale></numberQualifiers></type>
+    </attributes>
+    <attributes uuid="9a3c57e8-2170-4344-f587-6c4e1a0b3d72">
+      <name>ВКМ_ЧасыКОплатеКлиенту</name>
+      <synonym><key>ru</key><value>Часы к оплате клиенту</value></synonym>
+      <type><types>Number</types><numberQualifiers><precision>10</precision><scale>2</scale></numberQualifiers></type>
     </attributes>
   </tabularSections>
 </mdclass:Document>

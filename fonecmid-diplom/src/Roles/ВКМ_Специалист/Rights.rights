@@ -9,18 +9,7 @@
 		<right><name>MainWindowModeWorkplace</name><value>true</value></right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</name>
-		<right><name>Read</name><value>true</value></right>
-		<right><name>View</name><value>true</value></right>
-	</object>
-	<object>
-		<name>InformationRegister.ВКМ_ПланОтпусковСотрудников</name>
-		<right><name>Read</name><value>true</value></right>
-		<right><name>View</name><value>true</value></right>
-	</object>
-	<object>
-		<name>Report.ВКМ_ВыработкаСпециалистов</name>
-		<right><name>Read</name><value>true</value></right>
+		<name>Subsystem.ВКМ_ОбслуживаниеКлиентов</name>
 		<right><name>View</name><value>true</value></right>
 	</object>
 	<object>
@@ -29,11 +18,41 @@
 		<right><name>Insert</name><value>true</value></right>
 		<right><name>Update</name><value>true</value></right>
 		<right><name>Posting</name><value>true</value></right>
+		<right><name>UndoPosting</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+		<right><name>InteractiveInsert</name><value>true</value></right>
+		<right><name>Edit</name><value>true</value></right>
+		<right><name>InteractivePosting</name><value>true</value></right>
+		<right><name>InteractiveUndoPosting</name><value>true</value></right>
+		<right><name>InteractiveChangeOfPosted</name><value>true</value></right>
+	</object>
+	<object>
+		<name>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Insert</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
 		<right><name>View</name><value>true</value></right>
 	</object>
 	<object>
-		<name>Report.ВКМ_АнализОбслуживанияКлиентов</name>
+		<name>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</name>
 		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
+		<name>InformationRegister.ВКМ_УсловияОплатыСотрудников</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
+		<name>Report.ВКМ_ВыработкаСпециалистов</name>
+		<right><name>Use</name><value>true</value></right>
 		<right><name>View</name><value>true</value></right>
 	</object>
 </Rights>

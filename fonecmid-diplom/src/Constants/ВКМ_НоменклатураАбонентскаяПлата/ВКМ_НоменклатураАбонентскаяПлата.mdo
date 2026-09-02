@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7c4e8a21-3b9f-4d12-a6e8-91f0c2d4b5a7">
+  <producedTypes>
+    <managerType typeId="8d5f9b32-4c0a-4e23-b7f9-02a1d3e5c6b8" valueTypeId="9e6a0c43-5d1b-4f34-c8a0-13b2e4f6d7c9"/>
+    <valueManagerType typeId="ae7b1d54-6e2c-4045-d9b1-24c3f5a7e8d0" valueTypeId="bf8c2e65-7f3d-4156-e0c2-35d4a6b8f9e1"/>
+    <valueKeyType typeId="c09d3f76-804e-4267-f1d3-46e5b7c9a0f2" valueTypeId="d1ae4087-915f-4378-a2e4-57f6c8d0b1a3"/>
+  </producedTypes>
+  <name>ВКМ_НоменклатураАбонентскаяПлата</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номенклатура абонентская плата</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.Номенклатура</types>
+  </type>
+  <toolTip>
+    <key>ru</key>
+    <value>Номенклатура для строки ежемесячной абонентской платы в реализации</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

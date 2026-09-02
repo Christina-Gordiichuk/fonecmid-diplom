@@ -255,11 +255,57 @@
 			<c>
 				<i>0</i>
 				<c>
+					<f>2</f>
+					<parameter>СуммаПрописью</parameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>9</index>
+		<row>
+			<c>
+				<i>0</i>
+				<c>
 					<f>3</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Подписи сторон</v8:content>
+							<v8:content>Исполнитель _________________ / [ПредставлениеПоставщика] /</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>10</index>
+		<row>
+			<c>
+				<i>0</i>
+				<c>
+					<f>3</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказчик _________________ / [ПредставлениеПокупателя] /</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>11</index>
+		<row>
+			<c>
+				<i>0</i>
+				<c>
+					<f>3</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>М.П.</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -268,8 +314,8 @@
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>2</defaultFormatIndex>
-	<height>9</height>
-	<vgRows>9</vgRows>
+	<height>12</height>
+	<vgRows>12</vgRows>
 	<namedItem xsi:type="NamedItemCells">
 		<name>Заголовок</name>
 		<area>
@@ -345,7 +391,7 @@
 		<area>
 			<type>Rows</type>
 			<beginRow>8</beginRow>
-			<endRow>8</endRow>
+			<endRow>11</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>

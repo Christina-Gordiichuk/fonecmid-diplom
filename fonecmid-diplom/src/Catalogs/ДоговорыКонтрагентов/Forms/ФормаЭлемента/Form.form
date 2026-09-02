@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormField">
+    <name>Код</name>
+    <id>1</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.Code</segments>
+    </dataPath>
+    <type>InputField</type>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>Наименование</name>
+    <id>2</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.Description</segments>
+    </dataPath>
+    <type>InputField</type>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>Владелец</name>
+    <id>3</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.Owner</segments>
+    </dataPath>
+    <type>InputField</type>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>Организация</name>
+    <id>4</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.Организация</segments>
+    </dataPath>
+    <type>InputField</type>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ВидДоговора</name>
+    <id>5</id>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВидДоговора</segments>
+    </dataPath>
+    <handlers>
+      <event>OnChange</event>
+      <name>ВидДоговораПриИзменении</name>
+    </handlers>
+    <type>InputField</type>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ВКМ_ГруппаАбонентскоеОбслуживание</name>
+    <id>10</id>
+    <title>
+      <key>ru</key>
+      <value>Абонентское обслуживание</value>
+    </title>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ДатаНачалаДействия</name>
+      <id>11</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ДатаНачалаДействия</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ДатаОкончанияДействия</name>
+      <id>12</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ДатаОкончанияДействия</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_СуммаАбонентскойПлаты</name>
+      <id>13</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_СуммаАбонентскойПлаты</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_СтоимостьЧасаРаботы</name>
+      <id>14</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_СтоимостьЧасаРаботы</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <united>true</united>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <autoTitle>true</autoTitle>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>CatalogObject.ДоговорыКонтрагентов</types>
+    </valueType>
+    <main>true</main>
+    <savedData>true</savedData>
+  </attributes>
+  <extInfo xsi:type="form:CatalogFormExtInfo"/>
+</form:Form>

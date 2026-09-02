@@ -12,23 +12,36 @@
   <autonumbering>true</autonumbering>
   <registerRecords>AccumulationRegister.ВКМ_НачисленияСотрудников</registerRecords>
   <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
-  <postInPrivilegedMode>true</postInPrivilegedMode>
-  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <postInPrivilegedMode>false</postInPrivilegedMode>
+  <unpostInPrivilegedMode>false</unpostInPrivilegedMode>
   <attributes uuid="b9f93fd7-92b5-42d1-b32f-5f3fc741b245">
     <name>ВКМ_Сотрудник</name>
     <synonym><key>ru</key><value>Сотрудник</value></synonym>
     <type><types>CatalogRef.Пользователи</types></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="7299f3bf-52f5-45f9-a22f-352b2e3f90f8">
     <name>ВКМ_СуммаНачисления</name>
     <synonym><key>ru</key><value>Сумма начисления</value></synonym>
     <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="f2ff1f25-d6b2-46be-b8c4-3898cad72b7b">
-    <name>Комментарий</name>
+    <name>ВКМ_Комментарий</name>
     <synonym><key>ru</key><value>Комментарий</value></synonym>
     <type><types>String</types><stringQualifiers/></type>
   </attributes>
+  <tabularSections uuid="a1b2c3d4-e5f6-4789-9abc-def012345678">
+    <name>ВКМ_Начисления</name>
+    <synonym><key>ru</key><value>Начисления</value></synonym>
+    <attributes uuid="b2c3d4e5-f6a7-4890-abcd-ef0123456789">
+      <name>ВКМ_Сотрудник</name>
+      <synonym><key>ru</key><value>Сотрудник</value></synonym>
+      <type><types>CatalogRef.Пользователи</types></type>
+      <fillChecking>ShowError</fillChecking>
+    </attributes>
+    <attributes uuid="c3d4e5f6-a7b8-4901-bcde-f01234567890">
+      <name>ВКМ_СуммаНачисления</name>
+      <synonym><key>ru</key><value>Сумма начисления</value></synonym>
+      <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>

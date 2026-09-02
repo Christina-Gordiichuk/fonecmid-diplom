@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<dataSource>
 		<name>ИсточникДанных1</name>
 		<dataSourceType>Local</dataSourceType>
@@ -14,19 +14,54 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ВКМ_СуммаКОплатеОборот</dataPath>
-			<field>ВКМ_СуммаКОплатеОборот</field>
+			<dataPath>ВКМ_Договор</dataPath>
+			<field>ВКМ_Договор</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_СуммаКВыставлению</dataPath>
+			<field>ВКМ_СуммаКВыставлению</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_ФактическаяСуммаПоРаботам</dataPath>
+			<field>ВКМ_ФактическаяСуммаПоРаботам</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВыполненныеРаботыОбороты.ВКМ_Клиент КАК ВКМ_Клиент,
-	ВыполненныеРаботыОбороты.ВКМ_СуммаКОплатеОборот КАК ВКМ_СуммаКОплатеОборот
+	РаботыОбороты.ВКМ_Клиент КАК ВКМ_Клиент,
+	РаботыОбороты.ВКМ_Договор КАК ВКМ_Договор,
+	РаботыОбороты.ВКМ_СуммаКОплатеОборот КАК ВКМ_СуммаКВыставлению,
+	ЕСТЬNULL(ОтгрузкаРабот.Сумма, 0) КАК ВКМ_ФактическаяСуммаПоРаботам
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ВыполненныеРаботыОбороты</query>
+	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК РаботыОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Реализация.Контрагент КАК Контрагент,
+			Реализация.Договор КАК Договор,
+			СУММА(РеализацияУслуги.Сумма) КАК Сумма
+		ИЗ
+			Документ.РеализацияТоваровУслуг.Услуги КАК РеализацияУслуги
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.РеализацияТоваровУслуг КАК Реализация
+				ПО РеализацияУслуги.Ссылка = Реализация.Ссылка
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Константа.ВКМ_НоменклатураРаботыСпециалиста КАК НоменклатураРабот
+				ПО РеализацияУслуги.Номенклатура = НоменклатураРабот.Значение
+		ГДЕ
+			Реализация.Проведен
+			И Реализация.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		СГРУППИРОВАТЬ ПО
+			Реализация.Контрагент,
+			Реализация.Договор) КАК ОтгрузкаРабот
+		ПО РаботыОбороты.ВКМ_Договор = ОтгрузкаРабот.Договор
+			И РаботыОбороты.ВКМ_Клиент = ОтгрузкаРабот.Контрагент</query>
 	</dataSet>
 	<totalField>
-		<dataPath>ВКМ_СуммаКОплатеОборот</dataPath>
-		<expression>Сумма(ВКМ_СуммаКОплатеОборот)</expression>
+		<dataPath>ВКМ_СуммаКВыставлению</dataPath>
+		<expression>Сумма(ВКМ_СуммаКВыставлению)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВКМ_ФактическаяСуммаПоРаботам</dataPath>
+		<expression>Сумма(ВКМ_ФактическаяСуммаПоРаботам)</expression>
 	</totalField>
 	<parameter>
 		<name>СтандартныйПериод</name>
@@ -85,33 +120,29 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Анализ обслуживания клиентов</v8:content>
+				<v8:content>Анализ выставленных актов</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВКМ_СуммаКОплатеОборот</dcsset:field>
+					<dcsset:field>ВКМ_СуммаКВыставлению</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_ФактическаяСуммаПоРаботам</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>НачалоПериода</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfMonth</v8:variant>
-					</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>КонецПериода</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardEndingDate">
-						<v8:variant xsi:type="v8:StandardEndingDateVariant">EndOfMonth</v8:variant>
-					</dcscor:value>
-				</dcscor:item>
-			</dcsset:dataParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
 						<dcsset:field>ВКМ_Клиент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВКМ_Договор</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -128,4 +159,3 @@
 		</dcsset:settings>
 	</settingsVariant>
 </DataCompositionSchema>
-

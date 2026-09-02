@@ -11,23 +11,36 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
-  <postInPrivilegedMode>true</postInPrivilegedMode>
-  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <postInPrivilegedMode>false</postInPrivilegedMode>
+  <unpostInPrivilegedMode>false</unpostInPrivilegedMode>
   <attributes uuid="f3383dc0-7333-4992-9772-f463f4fcbce2">
     <name>ВКМ_Сотрудник</name>
     <synonym><key>ru</key><value>Сотрудник</value></synonym>
     <type><types>CatalogRef.Пользователи</types></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="e2f6ccef-7691-4649-ae2f-ed6e17fc7a6d">
     <name>ВКМ_СуммаВыплаты</name>
     <synonym><key>ru</key><value>Сумма выплаты</value></synonym>
     <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="8d7f4c87-9d5f-4888-8500-76fd9d1800c5">
-    <name>Комментарий</name>
+    <name>ВКМ_Комментарий</name>
     <synonym><key>ru</key><value>Комментарий</value></synonym>
     <type><types>String</types><stringQualifiers/></type>
   </attributes>
+  <tabularSections uuid="07b8c9d0-e1f2-4345-f012-3456789abcde">
+    <name>ВКМ_Выплаты</name>
+    <synonym><key>ru</key><value>Выплаты</value></synonym>
+    <attributes uuid="18c9d0e1-f203-4456-0123-456789abcdef">
+      <name>ВКМ_Сотрудник</name>
+      <synonym><key>ru</key><value>Сотрудник</value></synonym>
+      <type><types>CatalogRef.Пользователи</types></type>
+      <fillChecking>ShowError</fillChecking>
+    </attributes>
+    <attributes uuid="29d0e1f2-0314-4567-1234-56789abcdef0">
+      <name>ВКМ_Сумма</name>
+      <synonym><key>ru</key><value>Сумма</value></synonym>
+      <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>

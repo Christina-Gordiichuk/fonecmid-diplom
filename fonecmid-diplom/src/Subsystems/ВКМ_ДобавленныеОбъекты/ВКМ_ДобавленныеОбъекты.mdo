@@ -6,16 +6,16 @@
     <value>ВКМ добавленные объекты</value>
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
-  <includeInCommandInterface>true</includeInCommandInterface>
+  <includeInCommandInterface>false</includeInCommandInterface>
   <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
   <content>CommonModule.ВКМ_ОбслуживаниеКлиентов</content>
   <content>ScheduledJob.ВКМ_УведомленияПоОбслуживанию</content>
   <content>InformationRegister.ВКМ_ПланОтпусковСотрудников</content>
   <content>InformationRegister.ВКМ_МаршрутизацияTelegramКонтрагентов</content>
   <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
-  <content>InformationRegister.ВКМ_ОчередьУведомленийTelegram</content>
   <content>Document.ВКМ_ОбслуживаниеКлиента</content>
   <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
+  <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
   <content>Document.ВКМ_НачислениеЗарплаты</content>
   <content>Document.ВКМ_НачислениеФиксированнойПремии</content>
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
@@ -31,6 +31,8 @@
   <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
   <content>Constant.ВКМ_ТокенTelegramБота</content>
   <content>Constant.ВКМ_ИдентификаторЧатаTelegram</content>
+  <content>Constant.ВКМ_НоменклатураАбонентскаяПлата</content>
+  <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <content>Role.ВКМ_МенеджерПоОбслуживанию</content>
   <content>Role.ВКМ_Специалист</content>
   <content>Role.ВКМ_БухгалтерИТФирмы</content>

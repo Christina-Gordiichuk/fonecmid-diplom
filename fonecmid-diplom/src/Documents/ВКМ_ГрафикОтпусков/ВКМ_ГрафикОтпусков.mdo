@@ -10,29 +10,63 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <postInPrivilegedMode>true</postInPrivilegedMode>
-  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <postInPrivilegedMode>false</postInPrivilegedMode>
+  <unpostInPrivilegedMode>false</unpostInPrivilegedMode>
+  <defaultObjectForm>Document.ВКМ_ГрафикОтпусков.Form.ФормаДокумента</defaultObjectForm>
   <attributes uuid="63dd5ff3-4902-4332-9df5-b9084c00e9a7">
     <name>ВКМ_Сотрудник</name>
     <synonym><key>ru</key><value>Сотрудник</value></synonym>
     <type><types>CatalogRef.Пользователи</types></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="75f96ac8-cdb1-4789-9693-0c0f3d95d4a7">
     <name>ВКМ_ДатаНачала</name>
     <synonym><key>ru</key><value>Дата начала</value></synonym>
     <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="f4d5c5f8-82fd-4e7a-a6f1-bb6a58d631ce">
     <name>ВКМ_ДатаОкончания</name>
     <synonym><key>ru</key><value>Дата окончания</value></synonym>
     <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
-    <fillChecking>ShowError</fillChecking>
   </attributes>
   <attributes uuid="2ad2f027-7499-4cf8-bb7e-290643f3c4eb">
-    <name>Комментарий</name>
+    <name>ВКМ_Комментарий</name>
     <synonym><key>ru</key><value>Комментарий</value></synonym>
     <type><types>String</types><stringQualifiers><length>200</length></stringQualifiers></type>
   </attributes>
+  <attributes uuid="3be30138-85ae-4d09-cc8f-3a175404d5fc">
+    <name>ВКМ_Год</name>
+    <synonym><key>ru</key><value>Год</value></synonym>
+    <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <forms uuid="4cf40249-96bf-4e10-dd90-4b286505e6ad">
+    <name>ФормаДокумента</name>
+    <synonym><key>ru</key><value>Форма документа</value></synonym>
+  </forms>
+  <forms uuid="5df50350-a7c0-4f21-ee01-5c397606f7be">
+    <name>АнализГрафика</name>
+    <synonym><key>ru</key><value>Анализ графика</value></synonym>
+  </forms>
+  <tabularSections uuid="6ef60461-b8d1-4032-ff12-6d408707a8cf">
+    <name>ВКМ_ОтпускаСотрудников</name>
+    <synonym><key>ru</key><value>Отпуска сотрудников</value></synonym>
+    <attributes uuid="7fa70572-c9e2-4143-0023-7e519808b9d0">
+      <name>ВКМ_Сотрудник</name>
+      <synonym><key>ru</key><value>Сотрудник</value></synonym>
+      <type><types>CatalogRef.Пользователи</types></type>
+      <fillChecking>ShowError</fillChecking>
+    </attributes>
+    <attributes uuid="80b81683-d0f3-4254-1134-8f620909c0e1">
+      <name>ВКМ_ДатаНачала</name>
+      <synonym><key>ru</key><value>Дата начала</value></synonym>
+      <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
+      <fillChecking>ShowError</fillChecking>
+    </attributes>
+    <attributes uuid="91c92794-e104-4365-2245-9a731010d1f2">
+      <name>ВКМ_ДатаОкончания</name>
+      <synonym><key>ru</key><value>Дата окончания</value></synonym>
+      <type><types>Date</types><dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers></type>
+      <fillChecking>ShowError</fillChecking>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>

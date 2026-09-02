@@ -12,26 +12,10 @@
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.ВКМ_МассовоеСозданиеАктов.Form.Форма</defaultForm>
   <attributes uuid="f9cd3dc4-abf4-4700-bfa6-f5fd8d5d2414">
-    <name>ВКМ_ПериодС</name>
+    <name>ВКМ_Период</name>
     <synonym>
       <key>ru</key>
-      <value>Период с</value>
-    </synonym>
-    <type>
-      <types>Date</types>
-      <dateQualifiers>
-        <dateFractions>Date</dateFractions>
-      </dateQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-  </attributes>
-  <attributes uuid="c1715a4a-8d80-4f4f-89be-9d11dd2bf3cc">
-    <name>ВКМ_ПериодПо</name>
-    <synonym>
-      <key>ru</key>
-      <value>Период по</value>
+      <value>Период</value>
     </synonym>
     <type>
       <types>Date</types>
@@ -48,10 +32,10 @@
       <objectType typeId="5487e643-e82b-43b6-b711-0cc4f4ecaf75" valueTypeId="3216f8d2-4edb-45d0-ab26-e4dc7eccf408"/>
       <rowType typeId="fa0bfebf-cb0d-4ec8-8a07-d63b8c8188c7" valueTypeId="b3ab4868-dfc1-4850-8197-56cf79b30a24"/>
     </producedTypes>
-    <name>ВКМ_Заказы</name>
+    <name>ВКМ_Договоры</name>
     <synonym>
       <key>ru</key>
-      <value>Заказы для создания актов</value>
+      <value>Договоры</value>
     </synonym>
     <standardAttributes>
       <dataHistory>Use</dataHistory>
@@ -62,40 +46,26 @@
       <maxValue xsi:type="core:UndefinedValue"/>
     </standardAttributes>
     <attributes uuid="7cb7f252-c8e7-4ef4-b957-ba093bd3591d">
-      <name>ВКМ_Выбран</name>
+      <name>ВКМ_Договор</name>
       <synonym>
         <key>ru</key>
-        <value>Выбран</value>
+        <value>Договор</value>
       </synonym>
       <type>
-        <types>Boolean</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <fillValue xsi:type="core:BooleanValue"/>
-    </attributes>
-    <attributes uuid="77fec84b-ac88-4c3d-ab6c-9cd470f56a5b">
-      <name>ВКМ_Заказ</name>
-      <synonym>
-        <key>ru</key>
-        <value>Заказ</value>
-      </synonym>
-      <type>
-        <types>DocumentRef.ЗаказПокупателя</types>
+        <types>CatalogRef.ДоговорыКонтрагентов</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
-    <attributes uuid="71f225ec-d87e-4ad8-908f-0093675592b6">
-      <name>ВКМ_Дата</name>
+    <attributes uuid="77fec84b-ac88-4c3d-ab6c-9cd470f56a5b">
+      <name>ВКМ_Реализация</name>
       <synonym>
         <key>ru</key>
-        <value>Дата</value>
+        <value>Реализация</value>
       </synonym>
       <type>
-        <types>Date</types>
-        <dateQualifiers/>
+        <types>DocumentRef.РеализацияТоваровУслуг</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
@@ -109,24 +79,6 @@
       </synonym>
       <type>
         <types>CatalogRef.Контрагенты</types>
-      </type>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-      <fillValue xsi:type="core:UndefinedValue"/>
-    </attributes>
-    <attributes uuid="ac2ca12f-4b4b-45d5-b0fd-87da3ddf9928">
-      <name>ВКМ_Сумма</name>
-      <synonym>
-        <key>ru</key>
-        <value>Сумма</value>
-      </synonym>
-      <type>
-        <types>Number</types>
-        <numberQualifiers>
-          <precision>15</precision>
-          <scale>2</scale>
-          <nonNegative>true</nonNegative>
-        </numberQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

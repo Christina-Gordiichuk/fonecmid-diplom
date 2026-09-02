@@ -357,6 +357,163 @@
     </extInfo>
   </items>
   <items xsi:type="form:FormField">
+    <name>ВКМ_ДатаПроведенияРабот</name>
+    <id>40</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_ДатаПроведенияРабот</segments>
+    </dataPath>
+    <type>InputField</type>
+    <extendedTooltip>
+      <name>ВКМ_ДатаПроведенияРаботРасширеннаяПодсказка</name>
+      <id>41</id>
+      <type>Label</type>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ВКМ_ДатаПроведенияРаботКонтекстноеМеню</name>
+      <id>42</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ВКМ_ВремяНачалаРаботПлан</name>
+    <id>43</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_ВремяНачалаРаботПлан</segments>
+    </dataPath>
+    <type>InputField</type>
+    <extendedTooltip>
+      <name>ВКМ_ВремяНачалаРаботПланРасширеннаяПодсказка</name>
+      <id>44</id>
+      <type>Label</type>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ВКМ_ВремяНачалаРаботПланКонтекстноеМеню</name>
+      <id>45</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ВКМ_ВремяОкончанияРаботПлан</name>
+    <id>46</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_ВремяОкончанияРаботПлан</segments>
+    </dataPath>
+    <type>InputField</type>
+    <extendedTooltip>
+      <name>ВКМ_ВремяОкончанияРаботПланРасширеннаяПодсказка</name>
+      <id>47</id>
+      <type>Label</type>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ВКМ_ВремяОкончанияРаботПланКонтекстноеМеню</name>
+      <id>48</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+  </items>
+  <items xsi:type="form:FormField">
+    <name>ВКМ_ОписаниеПроблемы</name>
+    <id>49</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_ОписаниеПроблемы</segments>
+    </dataPath>
+    <type>InputField</type>
+    <extendedTooltip>
+      <name>ВКМ_ОписаниеПроблемыРасширеннаяПодсказка</name>
+      <id>50</id>
+      <type>Label</type>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ВКМ_ОписаниеПроблемыКонтекстноеМеню</name>
+      <id>51</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
+  </items>
+  <items xsi:type="form:Table">
+    <name>ВКМ_ВыполненныеРаботы</name>
+    <id>60</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>Объект.ВКМ_ВыполненныеРаботы</segments>
+    </dataPath>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ВыполненныеРаботыВКМ_ОписаниеРабот</name>
+      <id>61</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ВыполненныеРаботы.ВКМ_ОписаниеРабот</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ВыполненныеРаботыВКМ_ФактическиПотраченоЧасов</name>
+      <id>62</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ВыполненныеРаботы.ВКМ_ФактическиПотраченоЧасов</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ВыполненныеРаботыВКМ_ЧасыКОплатеКлиенту</name>
+      <id>63</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ВыполненныеРаботы.ВКМ_ЧасыКОплатеКлиенту</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ВыполненныеРаботыВКМ_Работа</name>
+      <id>64</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ВыполненныеРаботы.ВКМ_Работа</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВКМ_ВыполненныеРаботыВКМ_Сумма</name>
+      <id>65</id>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Объект.ВКМ_ВыполненныеРаботы.ВКМ_Сумма</segments>
+      </dataPath>
+      <type>InputField</type>
+    </items>
+  </items>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаПрисоединенныеФайлы</name>
+    <id>70</id>
+    <title>
+      <key>ru</key>
+      <value>Присоединенные файлы</value>
+    </title>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>Vertical</group>
+      <united>true</united>
+    </extInfo>
+  </items>
+  <items xsi:type="form:FormField">
     <name>Комментарий</name>
     <id>22</id>
     <visible>true</visible>
