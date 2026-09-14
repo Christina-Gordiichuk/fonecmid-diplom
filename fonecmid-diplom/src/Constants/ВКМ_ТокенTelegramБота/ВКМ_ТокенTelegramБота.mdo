@@ -16,6 +16,7 @@
       <length>200</length>
     </stringQualifiers>
   </type>
+  <useStandardCommands>true</useStandardCommands>
   <toolTip>
     <key>ru</key>
     <value>Токен API Telegram бота для отправки уведомлений</value>

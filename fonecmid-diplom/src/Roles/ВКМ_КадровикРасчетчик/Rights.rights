@@ -13,6 +13,52 @@
 		<right><name>View</name><value>true</value></right>
 	</object>
 	<object>
+		<name>InformationRegister.ВКМ_ГрафикиРаботы</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+		<right><name>Edit</name><value>true</value></right>
+	</object>
+	<object>
+		<name>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+		<right><name>Edit</name><value>true</value></right>
+	</object>
+	<object>
+		<name>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+		<right><name>Edit</name><value>true</value></right>
+	</object>
+	<object>
+		<name>ChartOfCalculationTypes.ВКМ_Удержания</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+		<right><name>Edit</name><value>true</value></right>
+	</object>
+	<object>
+		<name>CalculationRegister.ВКМ_ОсновныеНачисления</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
+		<name>CalculationRegister.ВКМ_ДополнительныеНачисления</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
+		<name>CalculationRegister.ВКМ_Удержания</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>Update</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
 		<name>InformationRegister.ВКМ_УсловияОплатыСотрудников</name>
 		<right><name>Read</name><value>true</value></right>
 		<right><name>Update</name><value>true</value></right>
@@ -27,12 +73,6 @@
 		<right><name>Edit</name><value>true</value></right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ВКМ_НачисленияСотрудников</name>
-		<right><name>Read</name><value>true</value></right>
-		<right><name>Update</name><value>true</value></right>
-		<right><name>View</name><value>true</value></right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</name>
 		<right><name>Read</name><value>true</value></right>
 		<right><name>Update</name><value>true</value></right>
@@ -41,11 +81,6 @@
 	<object>
 		<name>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</name>
 		<right><name>Read</name><value>true</value></right>
-		<right><name>View</name><value>true</value></right>
-	</object>
-	<object>
-		<name>Report.ВКМ_НачисленияСотрудников</name>
-		<right><name>Use</name><value>true</value></right>
 		<right><name>View</name><value>true</value></right>
 	</object>
 	<object>

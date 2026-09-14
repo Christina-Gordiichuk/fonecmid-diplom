@@ -47,6 +47,11 @@
 		<right><name>View</name><value>true</value></right>
 	</object>
 	<object>
+		<name>AccumulationRegister.ВКМ_ВыставленныеКлиентуРаботы</name>
+		<right><name>Read</name><value>true</value></right>
+		<right><name>View</name><value>true</value></right>
+	</object>
+	<object>
 		<name>Constant.ВКМ_НоменклатураАбонентскаяПлата</name>
 		<right><name>Read</name><value>true</value></right>
 		<right><name>View</name><value>true</value></right>

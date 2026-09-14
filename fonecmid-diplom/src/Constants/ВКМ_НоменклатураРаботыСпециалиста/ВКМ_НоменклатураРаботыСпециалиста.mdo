@@ -13,6 +13,7 @@
   <type>
     <types>CatalogRef.Номенклатура</types>
   </type>
+  <useStandardCommands>true</useStandardCommands>
   <toolTip>
     <key>ru</key>
     <value>Номенклатура для строки выполненных работ специалиста в реализации</value>

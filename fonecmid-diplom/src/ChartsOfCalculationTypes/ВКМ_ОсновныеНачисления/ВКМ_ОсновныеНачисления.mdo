@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCalculationTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8d2f5b01-3c6e-4a29-8f74-b1e25d9c8a32">
+  <producedTypes>
+    <objectType typeId="c12f5b01-3c6e-4a29-8f74-b1e25d9c8a01" valueTypeId="c22f5b01-3c6e-4a29-8f74-b1e25d9c8a02"/>
+    <refType typeId="c32f5b01-3c6e-4a29-8f74-b1e25d9c8a03" valueTypeId="c42f5b01-3c6e-4a29-8f74-b1e25d9c8a04"/>
+    <selectionType typeId="c52f5b01-3c6e-4a29-8f74-b1e25d9c8a05" valueTypeId="c62f5b01-3c6e-4a29-8f74-b1e25d9c8a06"/>
+    <listType typeId="c72f5b01-3c6e-4a29-8f74-b1e25d9c8a07" valueTypeId="c82f5b01-3c6e-4a29-8f74-b1e25d9c8a08"/>
+    <managerType typeId="c92f5b01-3c6e-4a29-8f74-b1e25d9c8a09" valueTypeId="ca2f5b01-3c6e-4a29-8f74-b1e25d9c8a0a"/>
+  </producedTypes>
+  <name>ВКМ_ОсновныеНачисления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Основные начисления</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <baseCalculationTypes>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</baseCalculationTypes>
+  <baseCalculationTypes>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</baseCalculationTypes>
+  <actionPeriodUse>true</actionPeriodUse>
+  <dependenceOnCalculationTypes>OnActionPeriod</dependenceOnCalculationTypes>
+  <predefined>
+    <items id="d12f5b01-3c6e-4a29-8f74-b1e25d9c8a11">
+      <name>ВКМ_Оклад</name>
+      <description>Оклад</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+    <items id="d22f5b01-3c6e-4a29-8f74-b1e25d9c8a12">
+      <name>ВКМ_Отпуск</name>
+      <description>Отпуск</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+      <actionPeriodIsBase>false</actionPeriodIsBase>
+    </items>
+  </predefined>
+</mdclass:ChartOfCalculationTypes>

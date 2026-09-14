@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCalculationTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="af4b7d23-5e80-4c41-ab96-d3047f1e0c54">
+  <producedTypes>
+    <objectType typeId="113b7d23-5e80-4c41-ab96-d3047f1e0c01" valueTypeId="123b7d23-5e80-4c41-ab96-d3047f1e0c02"/>
+    <refType typeId="133b7d23-5e80-4c41-ab96-d3047f1e0c03" valueTypeId="143b7d23-5e80-4c41-ab96-d3047f1e0c04"/>
+    <selectionType typeId="153b7d23-5e80-4c41-ab96-d3047f1e0c05" valueTypeId="163b7d23-5e80-4c41-ab96-d3047f1e0c06"/>
+    <listType typeId="173b7d23-5e80-4c41-ab96-d3047f1e0c07" valueTypeId="183b7d23-5e80-4c41-ab96-d3047f1e0c08"/>
+    <managerType typeId="193b7d23-5e80-4c41-ab96-d3047f1e0c09" valueTypeId="1a3b7d23-5e80-4c41-ab96-d3047f1e0c0a"/>
+  </producedTypes>
+  <name>ВКМ_Удержания</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удержания</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <baseCalculationTypes>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</baseCalculationTypes>
+  <baseCalculationTypes>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</baseCalculationTypes>
+  <actionPeriodUse>false</actionPeriodUse>
+  <dependenceOnCalculationTypes>OnActionPeriod</dependenceOnCalculationTypes>
+  <predefined>
+    <items id="213b7d23-5e80-4c41-ab96-d3047f1e0c11">
+      <name>ВКМ_НДФЛ</name>
+      <description>НДФЛ</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+</mdclass:ChartOfCalculationTypes>

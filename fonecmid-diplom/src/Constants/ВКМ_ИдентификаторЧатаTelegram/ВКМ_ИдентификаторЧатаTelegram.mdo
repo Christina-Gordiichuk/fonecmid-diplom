@@ -16,6 +16,7 @@
       <length>50</length>
     </stringQualifiers>
   </type>
+  <useStandardCommands>true</useStandardCommands>
   <toolTip>
     <key>ru</key>
     <value>Идентификатор чата для отправки уведомлений Telegram</value>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCalculationTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9e3a6c12-4d7f-4b30-9a85-c2f36e0d9b43">
+  <producedTypes>
+    <objectType typeId="e13a6c12-4d7f-4b30-9a85-c2f36e0d9b01" valueTypeId="e23a6c12-4d7f-4b30-9a85-c2f36e0d9b02"/>
+    <refType typeId="e33a6c12-4d7f-4b30-9a85-c2f36e0d9b03" valueTypeId="e43a6c12-4d7f-4b30-9a85-c2f36e0d9b04"/>
+    <selectionType typeId="e53a6c12-4d7f-4b30-9a85-c2f36e0d9b05" valueTypeId="e63a6c12-4d7f-4b30-9a85-c2f36e0d9b06"/>
+    <listType typeId="e73a6c12-4d7f-4b30-9a85-c2f36e0d9b07" valueTypeId="e83a6c12-4d7f-4b30-9a85-c2f36e0d9b08"/>
+    <managerType typeId="e93a6c12-4d7f-4b30-9a85-c2f36e0d9b09" valueTypeId="ea3a6c12-4d7f-4b30-9a85-c2f36e0d9b0a"/>
+  </producedTypes>
+  <name>ВКМ_ДополнительныеНачисления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дополнительные начисления</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <actionPeriodUse>false</actionPeriodUse>
+  <dependenceOnCalculationTypes>DontUse</dependenceOnCalculationTypes>
+  <predefined>
+    <items id="f13a6c12-4d7f-4b30-9a85-c2f36e0d9b11">
+      <name>ВКМ_ПроцентОтРабот</name>
+      <description>Процент от работ</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+    <items id="f23a6c12-4d7f-4b30-9a85-c2f36e0d9b12">
+      <name>ВКМ_Премия</name>
+      <description>Премия</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+  </predefined>
+</mdclass:ChartOfCalculationTypes>

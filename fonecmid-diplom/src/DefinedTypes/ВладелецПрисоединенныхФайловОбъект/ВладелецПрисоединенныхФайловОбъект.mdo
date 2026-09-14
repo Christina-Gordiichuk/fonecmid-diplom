@@ -14,6 +14,5 @@
     <types>CatalogObject.Контрагенты</types>
     <types>CatalogObject.Организации</types>
     <types>CatalogObject.ИдентификаторыОбъектовМетаданных</types>
-    <types>DocumentObject.ВКМ_ОбслуживаниеКлиента</types>
   </type>
 </mdclass:DefinedType>

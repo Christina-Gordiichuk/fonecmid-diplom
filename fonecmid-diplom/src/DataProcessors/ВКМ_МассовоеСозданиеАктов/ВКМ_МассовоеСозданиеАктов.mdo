@@ -25,7 +25,6 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <tabularSections uuid="058f5da8-f54e-4cb8-abf4-a1d80e993ec4">
     <producedTypes>
@@ -98,9 +97,7 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillValue xsi:type="core:StringValue">
-        <value></value>
-      </fillValue>
+      <fillValue xsi:type="core:StringValue"/>
     </attributes>
   </tabularSections>
   <forms uuid="f6bd70da-44d6-4302-a7d9-a4a3f5e8bcbf">

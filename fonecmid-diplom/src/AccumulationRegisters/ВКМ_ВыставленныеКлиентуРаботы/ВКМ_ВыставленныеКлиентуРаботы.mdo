@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7e0eb3c3-d0db-4f67-af47-1eaeb4f76d54">
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bbddc804-4e6c-4145-9c10-971eb449387b">
   <producedTypes>
-    <selectionType typeId="ad57b5f2-c873-486a-94cb-810fcf5dcc8f" valueTypeId="4be64517-f6ae-4f3b-90ad-40a2ad4fa95f"/>
-    <listType typeId="0f4d66e4-4dc0-4f64-83ea-17f194ded490" valueTypeId="184e4664-ed4d-4d85-936b-180a5e770ec8"/>
-    <managerType typeId="df0c52bf-810e-4526-a3f6-8031f3148bc0" valueTypeId="7ca22f5d-e248-451a-bf26-4d8e0212ff37"/>
-    <recordSetType typeId="de369f91-7f4f-4a11-ad40-f61506173f8c" valueTypeId="7f59eb17-fb95-4d7d-8ca0-d5b588ecf232"/>
-    <recordKeyType typeId="f7a9eb9f-b2be-42df-bad3-b6577093b337" valueTypeId="45d7488c-e5f6-46b5-a5bf-2fddcece8b99"/>
-    <recordType typeId="790bd0b2-cb54-465f-b185-3775a236d0df" valueTypeId="8e7ce8c0-b193-41a4-9e03-5852eabebf91"/>
+    <selectionType typeId="9bc87267-e652-4d50-89cd-50e2a0ce33d7" valueTypeId="fb532c90-2a5c-4926-8721-095ca20ee9b3"/>
+    <listType typeId="a28071d1-59d3-4fda-9dc3-e5deba6e2e0c" valueTypeId="7e81401e-36cf-45c4-a155-ba6e2bb71f2e"/>
+    <managerType typeId="68d7963d-aee7-42f3-ad24-d202f70a87c9" valueTypeId="b12aeba3-91b7-420e-8cd1-9be27411d113"/>
+    <recordSetType typeId="55783033-4e5e-4b7e-904b-772172619897" valueTypeId="b6af04f9-ef2b-4d94-a765-5850c101f00d"/>
+    <recordKeyType typeId="429ce0b1-03a8-4172-8115-9c84e278a4e7" valueTypeId="8ac0f9d4-3cc9-44d6-8f44-5cc73f78327e"/>
+    <recordType typeId="f66fe29e-50a1-4933-9b53-97bb4ca979b8" valueTypeId="cb3fccff-196a-48a5-9048-c8ef112c605c"/>
   </producedTypes>
-  <name>ВКМ_НачисленияСотрудников</name>
+  <name>ВКМ_ВыставленныеКлиентуРаботы</name>
   <synonym>
     <key>ru</key>
-    <value>Начисления сотрудников</value>
+    <value>Выставленные клиенту работы</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <registerType>Turnovers</registerType>
@@ -50,11 +50,53 @@
   </standardAttributes>
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
-  <resources uuid="b2450488-3d31-41ff-9855-2f8dcbfd7771">
-    <name>ВКМ_СуммаНачисления</name>
+  <dimensions uuid="5203abc0-dc5d-4cef-93f4-6526a518eaf7">
+    <name>ВКМ_Клиент</name>
     <synonym>
       <key>ru</key>
-      <value>Сумма начисления</value>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7b23fccb-08e6-4314-943b-0c6a2ee3ac0c">
+    <name>ВКМ_Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6eeb8b7e-904f-4d15-95b2-27290a568b3a">
+    <name>ВКМ_Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <resources uuid="4e7db4e8-2776-4b26-a626-9d7fd1105c6f">
+    <name>ВКМ_Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
     </synonym>
     <type>
       <types>Number</types>
@@ -67,35 +109,4 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
-  <dimensions uuid="7694da16-bc0d-4938-b180-114493628687">
-    <name>ВКМ_Сотрудник</name>
-    <synonym>
-      <key>ru</key>
-      <value>Сотрудник</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Пользователи</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
-  </dimensions>
-  <dimensions uuid="6ece1d58-5bc6-4aef-83d6-307d3be2eb71">
-    <name>ВКМ_ВидНачисления</name>
-    <synonym>
-      <key>ru</key>
-      <value>Вид начисления</value>
-    </synonym>
-    <type>
-      <types>String</types>
-      <stringQualifiers>
-        <length>50</length>
-      </stringQualifiers>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
-  </dimensions>
 </mdclass:AccumulationRegister>

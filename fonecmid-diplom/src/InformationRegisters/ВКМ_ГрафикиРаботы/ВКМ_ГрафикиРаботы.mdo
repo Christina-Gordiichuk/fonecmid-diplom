@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7c1e4a90-2b5d-4f18-9e63-a0d14c8b7f21">
+  <producedTypes>
+    <selectionType typeId="a11e4a90-2b5d-4f18-9e63-a0d14c8b7f01" valueTypeId="a21e4a90-2b5d-4f18-9e63-a0d14c8b7f02"/>
+    <listType typeId="a31e4a90-2b5d-4f18-9e63-a0d14c8b7f03" valueTypeId="a41e4a90-2b5d-4f18-9e63-a0d14c8b7f04"/>
+    <managerType typeId="a51e4a90-2b5d-4f18-9e63-a0d14c8b7f05" valueTypeId="a61e4a90-2b5d-4f18-9e63-a0d14c8b7f06"/>
+    <recordSetType typeId="a71e4a90-2b5d-4f18-9e63-a0d14c8b7f07" valueTypeId="a81e4a90-2b5d-4f18-9e63-a0d14c8b7f08"/>
+    <recordKeyType typeId="a91e4a90-2b5d-4f18-9e63-a0d14c8b7f09" valueTypeId="aa1e4a90-2b5d-4f18-9e63-a0d14c8b7f0a"/>
+    <recordType typeId="ab1e4a90-2b5d-4f18-9e63-a0d14c8b7f0b" valueTypeId="ac1e4a90-2b5d-4f18-9e63-a0d14c8b7f0c"/>
+    <recordManagerType typeId="ad1e4a90-2b5d-4f18-9e63-a0d14c8b7f0d" valueTypeId="ae1e4a90-2b5d-4f18-9e63-a0d14c8b7f0e"/>
+  </producedTypes>
+  <name>ВКМ_ГрафикиРаботы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Графики работы</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <informationRegisterPeriodicity>Nonperiodical</informationRegisterPeriodicity>
+  <writeMode>Independent</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b11e4a90-2b5d-4f18-9e63-a0d14c8b7f11">
+    <name>ВКМ_Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <scale>0</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="b21e4a90-2b5d-4f18-9e63-a0d14c8b7f12">
+    <name>ВКМ_Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

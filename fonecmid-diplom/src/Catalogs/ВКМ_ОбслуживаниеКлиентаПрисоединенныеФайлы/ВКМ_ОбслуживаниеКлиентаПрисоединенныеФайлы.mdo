@@ -114,7 +114,7 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <attributes uuid="4cd28cb1-4a94-43f4-9a42-bbc7c53ba1b9">
+  <attributes uuid="d7f97775-24a5-4752-911b-b874ee268885">
     <name>Автор</name>
     <synonym>
       <key>ru</key>
@@ -142,7 +142,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="dc33b8de-8795-4f9d-92c9-b0b04d117eff">
+  <attributes uuid="03a8907b-f395-413b-a216-edcc51c292fe">
     <name>ВладелецФайла</name>
     <synonym>
       <key>ru</key>
@@ -162,7 +162,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="4c3637e6-685e-4095-9982-cd3421b282cc">
+  <attributes uuid="63018dc7-6ed9-4c4f-a67d-4bc0a436ba36">
     <name>ДатаЗаема</name>
     <synonym>
       <key>ru</key>
@@ -191,7 +191,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="71695ed0-2d66-4e71-b37b-3855159e7bc2">
+  <attributes uuid="b3b2f9ba-ee37-4e23-9db4-ac926220baf9">
     <name>ДатаМодификацииУниверсальная</name>
     <synonym>
       <key>ru</key>
@@ -212,7 +212,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="813d46e5-f389-48ec-8086-3bc22c453bfe">
+  <attributes uuid="4185592c-143f-40e1-b8e6-90332d50d96c">
     <name>ДатаСоздания</name>
     <synonym>
       <key>ru</key>
@@ -236,7 +236,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="7f096448-5604-40bc-88dd-4dcf27fd4aef">
+  <attributes uuid="052dadfa-0034-4d2d-852b-df5709486ba4">
     <name>Зашифрован</name>
     <synonym>
       <key>ru</key>
@@ -254,7 +254,7 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="07f75363-f114-429c-9837-39b7be892ef1">
+  <attributes uuid="e81c7c86-e88b-4ba9-8023-2fd5b4ac1ec8">
     <name>Изменил</name>
     <synonym>
       <key>ru</key>
@@ -280,7 +280,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="202c4ce4-cf32-46cb-bf6a-043b591ac4d2">
+  <attributes uuid="a181a49f-d333-40cd-9b89-68262e62088b">
     <name>ИндексКартинки</name>
     <synonym>
       <key>ru</key>
@@ -304,7 +304,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="0e5bd931-06ef-4cb3-87cc-949bf14d15ad">
+  <attributes uuid="8e56ac0b-1e8d-420f-b799-fc5b43eb633e">
     <name>Описание</name>
     <synonym>
       <key>ru</key>
@@ -328,7 +328,7 @@
     <use>ForFolderAndItem</use>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="e28a2d50-14ca-4599-a234-26e6c2198da2">
+  <attributes uuid="2055c20d-635e-45b4-bccc-f0df0c1c42a8">
     <name>ПодписанЭП</name>
     <synonym>
       <key>ru</key>
@@ -347,7 +347,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="37a3b1e2-164d-4b1a-9244-431083a7cd0b">
+  <attributes uuid="0abea5bd-34e9-46b6-baa5-02ff2da0b6ee">
     <name>ПутьКФайлу</name>
     <synonym>
       <key>ru</key>
@@ -369,7 +369,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="471148c5-9c48-4221-84a6-6fea0fe8f0d5">
+  <attributes uuid="503a76e2-1a06-46dd-8e99-9f3ce995b458">
     <name>Размер</name>
     <synonym>
       <key>ru</key>
@@ -393,7 +393,7 @@
     <indexing>Index</indexing>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="e5ce8234-798a-471e-bb52-291765f7d46e">
+  <attributes uuid="244623cc-8b5f-4090-bc3e-ba1d8ebcfbb0">
     <name>Расширение</name>
     <synonym>
       <key>ru</key>
@@ -416,7 +416,7 @@
     </fillValue>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="38174cfa-7249-4158-b637-88335ffb6e50">
+  <attributes uuid="6be95106-1ff2-41ff-bb83-c7e2c00dd985">
     <name>Редактирует</name>
     <synonym>
       <key>ru</key>
@@ -441,7 +441,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="989e8cca-e5b6-4ab2-b97f-3e52b9f7ec14">
+  <attributes uuid="b5d774c7-5afc-4754-af19-3ccaf3b13ed6">
     <name>Служебный</name>
     <synonym>
       <key>ru</key>
@@ -460,7 +460,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="052abb63-6c75-408f-96bf-d0414a866785">
+  <attributes uuid="d5ed4192-e1ed-446d-806a-45ec267220d3">
     <name>СтатусИзвлеченияТекста</name>
     <synonym>
       <key>ru</key>
@@ -482,7 +482,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="0a1d2227-7b04-43bc-b73b-bcc33ab86da7">
+  <attributes uuid="3193d072-46bf-41a3-a658-e7a40d469e3c">
     <name>ТекстХранилище</name>
     <synonym>
       <key>ru</key>
@@ -501,7 +501,7 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="f253fbe8-57c1-4de6-89a3-272852df238a">
+  <attributes uuid="c5db31fb-cefe-4770-bf36-e13a7803f3f7">
     <name>ТипХраненияФайла</name>
     <synonym>
       <key>ru</key>
@@ -521,7 +521,7 @@
     <indexing>Index</indexing>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="e9d17673-b206-4363-854f-142c54ada728">
+  <attributes uuid="74389ade-36b1-4f08-9b39-999d79d4dc68">
     <name>Том</name>
     <synonym>
       <key>ru</key>
@@ -540,7 +540,7 @@
     <indexing>Index</indexing>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="2c201dbb-3ddb-4cfa-be63-4d5b5da60b91">
+  <attributes uuid="e00bfea1-9f0d-4821-ab21-df63e822208e">
     <name>ФайлХранилище</name>
     <synonym>
       <key>ru</key>
@@ -558,7 +558,7 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="af3af022-3f77-4180-8dbf-2af67f9cc9cd">
+  <attributes uuid="78bea189-ee4c-42b9-b588-9d61ad742860">
     <name>ХранитьВерсии</name>
     <synonym>
       <key>ru</key>
@@ -578,10 +578,10 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <tabularSections uuid="bd285b4c-8bd4-4b5e-be92-fd3d6b5c188b">
+  <tabularSections uuid="7bac9269-2543-4bea-b0fe-26dddc335765">
     <producedTypes>
-      <objectType typeId="f2871ceb-c75c-446a-b575-36f9e7b17bcf" valueTypeId="b1880ea5-9878-4caf-9879-17d032bcd37d"/>
-      <rowType typeId="09254d0b-9879-4123-8ee5-a851b55e14c5" valueTypeId="f7eafde5-02bc-4615-b60e-ca1807412d41"/>
+      <objectType typeId="6c5bbf80-ac32-4ba6-9695-4064c3bda0b8" valueTypeId="49eb3b86-a1a7-4e0e-936e-eb070b17455a"/>
+      <rowType typeId="ccd6be82-b61c-4f7f-a9fe-8cf22702c60f" valueTypeId="cc5d14a5-dfac-47e3-ae5e-b250a83594c4"/>
     </producedTypes>
     <name>УдалитьЭлектронныеПодписи</name>
     <synonym>
@@ -600,7 +600,7 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
     </standardAttributes>
-    <attributes uuid="e72d707f-6a95-48a1-b3af-96d3324cb045">
+    <attributes uuid="afd92a55-ba47-4e45-a365-272fff26cadd">
       <name>ДатаПодписи</name>
       <synonym>
         <key>ru</key>
@@ -618,7 +618,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
     </attributes>
-    <attributes uuid="6eed4350-45db-474f-ae7f-7b0a37d1a8de">
+    <attributes uuid="1f9c29d4-6acf-4597-8c84-4b3676788a58">
       <name>ИмяФайлаПодписи</name>
       <synonym>
         <key>ru</key>
@@ -638,7 +638,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
     </attributes>
-    <attributes uuid="05d6e24b-b6b2-492f-a7b0-d9cfe2553819">
+    <attributes uuid="a50fb091-efae-46a5-a81d-316743d9f337">
       <name>Комментарий</name>
       <synonym>
         <key>ru</key>
@@ -657,7 +657,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="46c535a1-9966-411e-a17c-fecff02ac2c0">
+    <attributes uuid="43fcf750-6855-49cc-acd0-fea49d5f9470">
       <name>КомуВыданСертификат</name>
       <synonym>
         <key>ru</key>
@@ -675,7 +675,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
     </attributes>
-    <attributes uuid="9bb3bf79-9c1c-4590-8425-5b96df91a763">
+    <attributes uuid="563ee017-39c5-4b4f-b67d-d91ec8f726d3">
       <name>Отпечаток</name>
       <synonym>
         <key>ru</key>
@@ -695,7 +695,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
     </attributes>
-    <attributes uuid="40fdcdc2-691e-44f5-aede-c938c308dd73">
+    <attributes uuid="05de1a75-edf5-466b-91c4-aee578af60b3">
       <name>Подпись</name>
       <synonym>
         <key>ru</key>
@@ -712,7 +712,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
     </attributes>
-    <attributes uuid="14429780-ab7a-4c09-b6b1-c66554087f49">
+    <attributes uuid="94284dd9-6418-4da4-a693-7d005b16c781">
       <name>УстановившийПодпись</name>
       <synonym>
         <key>ru</key>
@@ -730,7 +730,7 @@
       <dataHistory>Use</dataHistory>
       <indexing>Index</indexing>
     </attributes>
-    <attributes uuid="4d0f3fc4-cdaf-454c-bcac-ff212b6186e2">
+    <attributes uuid="6f9e11ee-23bc-41ae-b8b7-f615026b0c20">
       <name>Сертификат</name>
       <synonym>
         <key>ru</key>
@@ -748,7 +748,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="80d6d0fd-4f7a-4f58-b796-fa1cea70b1ba">
+    <attributes uuid="2ff34bb4-9b25-4897-a3c7-a0ec301b036c">
       <name>ДатаПроверкиПодписи</name>
       <synonym>
         <key>ru</key>
@@ -767,7 +767,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="c08d231d-4a09-4b57-9169-b667cb596801">
+    <attributes uuid="dc1ba06a-2901-41d1-bfcc-901cfaed5718">
       <name>ПодписьВерна</name>
       <synonym>
         <key>ru</key>
@@ -786,10 +786,10 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
   </tabularSections>
-  <tabularSections uuid="f2c282d2-5fa3-4b16-ba69-02ff28f03a13">
+  <tabularSections uuid="b65bfc3f-95fc-4f9c-b71e-b21b4acd90aa">
     <producedTypes>
-      <objectType typeId="82eefdc2-77d5-4870-97b5-60e22b8fbdf5" valueTypeId="deb88438-375c-499e-9c2c-ec85bc12bef4"/>
-      <rowType typeId="9daf0964-5406-4b5d-a3c5-2b7f68880b67" valueTypeId="2bc5d1ae-0fe3-48c5-8551-a66efe9960e3"/>
+      <objectType typeId="095baa1a-e287-48c7-82e2-6d3fafe6854c" valueTypeId="5738ec9a-e2e3-430f-9dad-4fec0724f8cd"/>
+      <rowType typeId="5ccbedb0-9d15-469d-807a-d6d052c3c5d0" valueTypeId="cea2a99b-47ff-4504-8980-ea1720975f34"/>
     </producedTypes>
     <name>УдалитьСертификатыШифрования</name>
     <synonym>
@@ -808,7 +808,7 @@
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
     </standardAttributes>
-    <attributes uuid="0d5016ee-8f41-4e92-9f10-f22f2128702d">
+    <attributes uuid="d55d9c51-33ed-4c1f-b865-5a267d26f5e7">
       <name>Отпечаток</name>
       <synonym>
         <key>ru</key>
@@ -828,7 +828,7 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
     </attributes>
-    <attributes uuid="a1cc70ef-40fe-4f15-9156-8b75a74002c4">
+    <attributes uuid="64fd476c-cfe5-4ffe-827b-91a51c838ecc">
       <name>Представление</name>
       <synonym>
         <key>ru</key>
@@ -847,7 +847,7 @@
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
-    <attributes uuid="c64e12b3-7939-41b0-a361-e8a9da324fd9">
+    <attributes uuid="882b3205-e797-4cf2-809c-0bebd34bf0f5">
       <name>Сертификат</name>
       <synonym>
         <key>ru</key>

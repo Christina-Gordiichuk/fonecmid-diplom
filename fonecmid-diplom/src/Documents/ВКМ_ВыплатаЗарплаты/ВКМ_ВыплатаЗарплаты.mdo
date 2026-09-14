@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2790f064-1e4b-4a80-a511-4bf2b5ce56f2">
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2790f064-1e4b-4a80-a511-4bf2b5ce56f2">
+  <producedTypes>
+    <objectType typeId="4adec293-eac1-447a-a121-8aed5914ce58" valueTypeId="4d47b5d7-bf6a-40d3-94f1-39862c3fe34e"/>
+    <refType typeId="062c1f9e-5c0d-4277-99c2-b98194b8e563" valueTypeId="1f845466-6c01-459f-a7dd-c5959f85fd3c"/>
+    <selectionType typeId="6235a33d-847a-477d-a7cc-9c2b708e279d" valueTypeId="e28df226-e082-41e3-bac4-69c75eacd60f"/>
+    <listType typeId="0b9a3c29-33ac-48f9-888b-fae5e13dbbfb" valueTypeId="5bab9540-031a-48ca-8829-d63a74e3274f"/>
+    <managerType typeId="8606a7f2-b7b5-4339-991b-3ff2caf63d99" valueTypeId="03e0901b-fb92-460e-bdaa-45ae188571da"/>
+  </producedTypes>
   <name>ВКМ_ВыплатаЗарплаты</name>
-  <synonym><key>ru</key><value>Выплата зарплаты</value></synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Выплата зарплаты</value>
+  </synonym>
   <useStandardCommands>true</useStandardCommands>
   <inputByString>Document.ВКМ_ВыплатаЗарплаты.StandardAttribute.Number</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
@@ -11,36 +21,96 @@
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <registerRecords>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</registerRecords>
-  <postInPrivilegedMode>false</postInPrivilegedMode>
-  <unpostInPrivilegedMode>false</unpostInPrivilegedMode>
-  <attributes uuid="f3383dc0-7333-4992-9772-f463f4fcbce2">
-    <name>ВКМ_Сотрудник</name>
-    <synonym><key>ru</key><value>Сотрудник</value></synonym>
-    <type><types>CatalogRef.Пользователи</types></type>
+  <defaultObjectForm>Document.ВКМ_ВыплатаЗарплаты.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ВКМ_ВыплатаЗарплаты.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="4d5e6f70-8192-4a12-def0-123456789ab6">
+    <name>ВКМ_СотрудникиСтрокой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудники</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
   </attributes>
   <attributes uuid="e2f6ccef-7691-4649-ae2f-ed6e17fc7a6d">
     <name>ВКМ_СуммаВыплаты</name>
-    <synonym><key>ru</key><value>Сумма выплаты</value></synonym>
-    <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма выплаты</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
   </attributes>
   <attributes uuid="8d7f4c87-9d5f-4888-8500-76fd9d1800c5">
     <name>ВКМ_Комментарий</name>
-    <synonym><key>ru</key><value>Комментарий</value></synonym>
-    <type><types>String</types><stringQualifiers/></type>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
   </attributes>
+  <forms uuid="ac3e4f50-6172-4839-ca4b-d15e2f304162">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dbe4f506-1728-4901-cdef-0123456789b3">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <tabularSections uuid="07b8c9d0-e1f2-4345-f012-3456789abcde">
+    <producedTypes>
+      <objectType typeId="b4ce74a4-a527-4742-827d-322369da440e" valueTypeId="122ea9b7-b47b-439a-b9f8-2562acb72692"/>
+      <rowType typeId="7e9b84cc-c6cf-447a-a96e-1332e364a707" valueTypeId="8e8eae2c-2177-49e2-a624-37dbbd3a8ba1"/>
+    </producedTypes>
     <name>ВКМ_Выплаты</name>
-    <synonym><key>ru</key><value>Выплаты</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выплаты</value>
+    </synonym>
     <attributes uuid="18c9d0e1-f203-4456-0123-456789abcdef">
       <name>ВКМ_Сотрудник</name>
-      <synonym><key>ru</key><value>Сотрудник</value></synonym>
-      <type><types>CatalogRef.Пользователи</types></type>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
       <fillChecking>ShowError</fillChecking>
     </attributes>
     <attributes uuid="29d0e1f2-0314-4567-1234-56789abcdef0">
       <name>ВКМ_Сумма</name>
-      <synonym><key>ru</key><value>Сумма</value></synonym>
-      <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
     </attributes>
   </tabularSections>
 </mdclass:Document>

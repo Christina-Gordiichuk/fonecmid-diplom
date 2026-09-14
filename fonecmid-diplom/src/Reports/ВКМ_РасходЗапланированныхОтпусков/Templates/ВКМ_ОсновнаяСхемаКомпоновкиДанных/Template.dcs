@@ -9,6 +9,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВКМ_Сотрудник</dataPath>
 			<field>ВКМ_Сотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -16,47 +22,72 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВКМ_ДнейПоПлану</dataPath>
 			<field>ВКМ_ДнейПоПлану</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней по плану</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВКМ_ДнейФакт</dataPath>
 			<field>ВКМ_ДнейФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней факт</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ПланОтпусков.ВКМ_Сотрудник КАК ВКМ_Сотрудник,
-	СУММА(РАЗНОСТЬДАТ(
-		ВЫБОР
-			КОГДА ПланОтпусков.ВКМ_ДатаНачала &lt; &amp;НачалоГода
-				ТОГДА &amp;НачалоГода
-			ИНАЧЕ ПланОтпусков.ВКМ_ДатаНачала
-		КОНЕЦ,
-		ВЫБОР
-			КОГДА ПланОтпусков.ВКМ_ДатаОкончания &gt; &amp;КонецГода
-				ТОГДА &amp;КонецГода
-			ИНАЧЕ ПланОтпусков.ВКМ_ДатаОкончания
-		КОНЕЦ, ДЕНЬ) + 1) КАК ВКМ_ДнейПоПлану,
-	СУММА(ВЫБОР
-			КОГДА ПланОтпусков.ВКМ_ДатаОкончания &lt; &amp;ТекущаяДата
-				ТОГДА РАЗНОСТЬДАТ(
-					ВЫБОР
-						КОГДА ПланОтпусков.ВКМ_ДатаНачала &lt; &amp;НачалоГода
-							ТОГДА &amp;НачалоГода
-						ИНАЧЕ ПланОтпусков.ВКМ_ДатаНачала
-					КОНЕЦ,
-					ВЫБОР
-						КОГДА ПланОтпусков.ВКМ_ДатаОкончания &gt; &amp;КонецГода
-							ТОГДА &amp;КонецГода
-						ИНАЧЕ ПланОтпусков.ВКМ_ДатаОкончания
-					КОНЕЦ, ДЕНЬ) + 1
-			ИНАЧЕ 0
-		КОНЕЦ) КАК ВКМ_ДнейФакт
+	ЕСТЬNULL(ПланОтпусков.ВКМ_Сотрудник, ФактОтпусков.ВКМ_Сотрудник) КАК ВКМ_Сотрудник,
+	ЕСТЬNULL(ПланОтпусков.ВКМ_ДнейПоПлану, 0) КАК ВКМ_ДнейПоПлану,
+	ЕСТЬNULL(ФактОтпусков.ВКМ_ДнейФакт, 0) КАК ВКМ_ДнейФакт
 ИЗ
-	РегистрСведений.ВКМ_ПланОтпусковСотрудников КАК ПланОтпусков
-ГДЕ
-	ПланОтпусков.ВКМ_ДатаНачала &lt;= &amp;КонецГода
-	И ПланОтпусков.ВКМ_ДатаОкончания &gt;= &amp;НачалоГода
-СГРУППИРОВАТЬ ПО
-	ПланОтпусков.ВКМ_Сотрудник</query>
+	(ВЫБРАТЬ
+		План.ВКМ_Сотрудник КАК ВКМ_Сотрудник,
+		СУММА(РАЗНОСТЬДАТ(
+			ВЫБОР
+				КОГДА План.ВКМ_ДатаНачала &lt; &amp;НачалоГода
+					ТОГДА &amp;НачалоГода
+				ИНАЧЕ План.ВКМ_ДатаНачала
+			КОНЕЦ,
+			ВЫБОР
+				КОГДА План.ВКМ_ДатаОкончания &gt; &amp;КонецГода
+					ТОГДА &amp;КонецГода
+				ИНАЧЕ План.ВКМ_ДатаОкончания
+			КОНЕЦ, ДЕНЬ) + 1) КАК ВКМ_ДнейПоПлану
+	ИЗ
+		РегистрСведений.ВКМ_ПланОтпусковСотрудников КАК План
+	ГДЕ
+		План.ВКМ_ДатаНачала &lt;= &amp;КонецГода
+		И План.ВКМ_ДатаОкончания &gt;= &amp;НачалоГода
+	СГРУППИРОВАТЬ ПО
+		План.ВКМ_Сотрудник) КАК ПланОтпусков
+		ПОЛНОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Начисления.ВКМ_Сотрудник КАК ВКМ_Сотрудник,
+			СУММА(РАЗНОСТЬДАТ(
+				ВЫБОР
+					КОГДА Начисления.ПериодДействияНачало &lt; &amp;НачалоГода
+						ТОГДА &amp;НачалоГода
+					ИНАЧЕ Начисления.ПериодДействияНачало
+				КОНЕЦ,
+				ВЫБОР
+					КОГДА Начисления.ПериодДействияКонец &gt; &amp;КонецГода
+						ТОГДА &amp;КонецГода
+					ИНАЧЕ Начисления.ПериодДействияКонец
+				КОНЕЦ, ДЕНЬ) + 1) КАК ВКМ_ДнейФакт
+		ИЗ
+			РегистрРасчета.ВКМ_ОсновныеНачисления КАК Начисления
+		ГДЕ
+			Начисления.Активность
+			И Начисления.ВидРасчета = ЗНАЧЕНИЕ(ПланВидовРасчета.ВКМ_ОсновныеНачисления.ВКМ_Отпуск)
+			И Начисления.ПериодДействияНачало &lt;= &amp;КонецГода
+			И Начисления.ПериодДействияКонец &gt;= &amp;НачалоГода
+		СГРУППИРОВАТЬ ПО
+			Начисления.ВКМ_Сотрудник) КАК ФактОтпусков
+		ПО ПланОтпусков.ВКМ_Сотрудник = ФактОтпусков.ВКМ_Сотрудник</query>
 	</dataSet>
 	<totalField>
 		<dataPath>ВКМ_ДнейПоПлану</dataPath>
@@ -69,7 +100,10 @@
 	<parameter>
 		<name>СтандартныйПериод</name>
 		<title xsi:type="v8:LocalStringType">
-			<v8:item><v8:lang>ru</v8:lang><v8:content>Год</v8:content></v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год</v8:content>
+			</v8:item>
 		</title>
 		<valueType>
 			<v8:Type>v8:StandardPeriod</v8:Type>
@@ -85,9 +119,17 @@
 	<parameter>
 		<name>НачалоГода</name>
 		<title xsi:type="v8:LocalStringType">
-			<v8:item><v8:lang>ru</v8:lang><v8:content>Начало года</v8:content></v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало года</v8:content>
+			</v8:item>
 		</title>
-		<valueType><v8:Type>xs:dateTime</v8:Type><v8:DateQualifiers><v8:DateFractions>Date</v8:DateFractions></v8:DateQualifiers></valueType>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;СтандартныйПериод.ДатаНачала</expression>
@@ -95,22 +137,20 @@
 	<parameter>
 		<name>КонецГода</name>
 		<title xsi:type="v8:LocalStringType">
-			<v8:item><v8:lang>ru</v8:lang><v8:content>Конец года</v8:content></v8:item>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец года</v8:content>
+			</v8:item>
 		</title>
-		<valueType><v8:Type>xs:dateTime</v8:Type><v8:DateQualifiers><v8:DateFractions>Date</v8:DateFractions></v8:DateQualifiers></valueType>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;СтандартныйПериод.ДатаОкончания</expression>
-	</parameter>
-	<parameter>
-		<name>ТекущаяДата</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item><v8:lang>ru</v8:lang><v8:content>Текущая дата</v8:content></v8:item>
-		</title>
-		<valueType><v8:Type>xs:dateTime</v8:Type></valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>ТекущаяДатаСеанса()</expression>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -123,12 +163,33 @@
 		<dcsset:settings>
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВКМ_ДнейПоПлану</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВКМ_ДнейФакт</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>true</dcscor:use>
+					<dcscor:parameter>СтандартныйПериод</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>c4e8a1b2-7d6f-4c3a-8b9e-2a1f0e3d5c7b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВКМ_Сотрудник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">

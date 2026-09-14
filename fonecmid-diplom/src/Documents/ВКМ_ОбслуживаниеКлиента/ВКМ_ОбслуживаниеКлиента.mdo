@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="90a2b224-c85f-430e-a314-7f9f9081dc13">
+  <producedTypes>
+    <objectType typeId="a0bfa583-cf99-4602-afbf-041111e610fe" valueTypeId="844e9e39-a434-4576-830a-ec4bdca83bac"/>
+    <refType typeId="70e0dac9-b613-4c94-95f5-b532057c88b0" valueTypeId="a0c583be-bd85-4135-81ab-d2db6cd76a41"/>
+    <selectionType typeId="57d89393-c0fd-4769-8d99-3fe48f041043" valueTypeId="02aede64-0871-401a-b5b9-4ba47b2f5f48"/>
+    <listType typeId="40a6afad-b0d9-421e-91a3-b681ea76e3d5" valueTypeId="483cc1b0-ca91-46ec-85a7-e1f801d6df02"/>
+    <managerType typeId="cfc6936c-198b-4c19-afb2-2a037d69e47e" valueTypeId="fd53ede8-f7f3-4e58-a481-b79beeb5e841"/>
+  </producedTypes>
   <name>ВКМ_ОбслуживаниеКлиента</name>
   <synonym>
     <key>ru</key>
@@ -22,26 +29,47 @@
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.ВКМ_ОбслуживаниеКлиента.Form.ФормаДокумента</defaultObjectForm>
   <defaultListForm>Document.ВКМ_ОбслуживаниеКлиента.Form.ФормаСписка</defaultListForm>
-  <registerRecords>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</registerRecords>
   <registerRecords>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</registerRecords>
-  <postInPrivilegedMode>false</postInPrivilegedMode>
-  <unpostInPrivilegedMode>false</unpostInPrivilegedMode>
+  <registerRecords>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</registerRecords>
   <attributes uuid="43afeb15-fc64-48f7-9f4a-77e21c0f79ac">
     <name>Организация</name>
-    <synonym><key>ru</key><value>Организация</value></synonym>
-    <type><types>CatalogRef.Организации</types></type>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <attributes uuid="cc8cc69f-c500-4fda-abf3-c59de7d230e4">
     <name>Контрагент</name>
-    <synonym><key>ru</key><value>Контрагент</value></synonym>
-    <type><types>CatalogRef.Контрагенты</types></type>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <attributes uuid="83098f48-5dca-42be-8555-c1f2c67a7336">
     <name>Договор</name>
-    <synonym><key>ru</key><value>Договор</value></synonym>
-    <type><types>CatalogRef.ДоговорыКонтрагентов</types></type>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
     <choiceParameterLinks>
       <name>Отбор.Владелец</name>
@@ -57,84 +85,166 @@
         <value>Enum.ВидыДоговоровКонтрагентов.EnumValue.ВКМ_АбонентскоеОбслуживание</value>
       </value>
     </choiceParameters>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <attributes uuid="f8c1e571-5d4a-4fd1-95a4-ca42db5cb68b">
     <name>ВКМ_ДатаВремяВыполнения</name>
-    <synonym><key>ru</key><value>Дата и время выполнения</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Дата и время выполнения</value>
+    </synonym>
     <type>
       <types>Date</types>
-      <dateQualifiers><dateFractions>DateTime</dateFractions></dateQualifiers>
+      <dateQualifiers/>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <attributes uuid="e8f1cc5f-a972-435a-8d7a-4ecf48594f7f">
     <name>ВКМ_Специалист</name>
-    <synonym><key>ru</key><value>Специалист</value></synonym>
-    <type><types>CatalogRef.Пользователи</types></type>
+    <synonym>
+      <key>ru</key>
+      <value>Специалист</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <attributes uuid="5d8c51eb-d355-4f10-8ad9-4266f4be1f72">
     <name>ВКМ_СуммаДокумента</name>
-    <synonym><key>ru</key><value>Сумма документа</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма документа</value>
+    </synonym>
     <type>
       <types>Number</types>
-      <numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
   <attributes uuid="2056ee55-a65d-4574-99bd-ba4b30774df8">
     <name>Комментарий</name>
-    <synonym><key>ru</key><value>Комментарий</value></synonym>
-    <type><types>String</types><stringQualifiers/></type>
-    <fillValue xsi:type="core:StringValue"><value></value></fillValue>
-  </attributes>
-  <attributes uuid="3a7c91e2-6b14-4d88-9f21-0c8e5a4b7d16">
-    <name>ВКМ_ДатаПроведенияРабот</name>
-    <synonym><key>ru</key><value>Дата проведения работ</value></synonym>
-    <type>
-      <types>Date</types>
-      <dateQualifiers><dateFractions>Date</dateFractions></dateQualifiers>
-    </type>
-    <fillChecking>ShowError</fillChecking>
-  </attributes>
-  <attributes uuid="4b8d02f3-7c25-4e99-a032-1d9f6b5c8e27">
-    <name>ВКМ_ВремяНачалаРаботПлан</name>
-    <synonym><key>ru</key><value>Время начала работ (план)</value></synonym>
-    <type>
-      <types>Date</types>
-      <dateQualifiers><dateFractions>Time</dateFractions></dateQualifiers>
-    </type>
-  </attributes>
-  <attributes uuid="5c9e13a4-8d36-4f00-b143-2e0a7c6d9f38">
-    <name>ВКМ_ВремяОкончанияРаботПлан</name>
-    <synonym><key>ru</key><value>Время окончания работ (план)</value></synonym>
-    <type>
-      <types>Date</types>
-      <dateQualifiers><dateFractions>Time</dateFractions></dateQualifiers>
-    </type>
-  </attributes>
-  <attributes uuid="6d0f24b5-9e47-4011-c254-3f1b8d7e0a49">
-    <name>ВКМ_ОписаниеПроблемы</name>
-    <synonym><key>ru</key><value>Описание проблемы</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers/>
     </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="3a7c91e2-6b14-4d88-9f21-0c8e5a4b7d16">
+    <name>ВКМ_ДатаПроведенияРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата проведения работ</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4b8d02f3-7c25-4e99-a032-1d9f6b5c8e27">
+    <name>ВКМ_ВремяНачалаРаботПлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время начала работ (план)</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Time</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5c9e13a4-8d36-4f00-b143-2e0a7c6d9f38">
+    <name>ВКМ_ВремяОкончанияРаботПлан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время окончания работ (план)</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Time</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6d0f24b5-9e47-4011-c254-3f1b8d7e0a49">
+    <name>ВКМ_ОписаниеПроблемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание проблемы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <forms uuid="d90e30e5-c1c3-4747-af56-2c8f6a744dca">
     <name>ФормаДокумента</name>
-    <synonym><key>ru</key><value>Форма документа</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
   </forms>
   <forms uuid="06a13eb8-d0d7-4965-a01e-3a0f018f1c98">
     <name>ФормаСписка</name>
-    <synonym><key>ru</key><value>Форма списка</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
   </forms>
   <tabularSections uuid="83df98fb-eb66-4f80-95bb-2a10686ef536">
+    <producedTypes>
+      <objectType typeId="ded0cea2-bd25-4717-b1aa-1f2ea10ecba7" valueTypeId="88409170-fea4-4d4f-a232-a10591956df3"/>
+      <rowType typeId="c1d2d9ff-0b37-4484-99f8-420b65254ec7" valueTypeId="90d7eaaa-21e3-4e18-9357-7210a1b39297"/>
+    </producedTypes>
     <name>ВКМ_ВыполненныеРаботы</name>
-    <synonym><key>ru</key><value>Выполненные работы</value></synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Выполненные работы</value>
+    </synonym>
     <attributes uuid="43496f54-edf8-4f79-9741-d4ecb85f9df8">
       <name>ВКМ_Работа</name>
-      <synonym><key>ru</key><value>Работа</value></synonym>
-      <type><types>CatalogRef.Номенклатура</types></type>
+      <synonym>
+        <key>ru</key>
+        <value>Работа</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
       <choiceParameters>
         <name>Отбор.ВидНоменклатуры</name>
         <value xsi:type="core:ReferenceValue">
@@ -144,33 +254,96 @@
     </attributes>
     <attributes uuid="af96c8a0-47ff-4eb3-b1f5-ed8fd1f52f1e">
       <name>ВКМ_Часы</name>
-      <synonym><key>ru</key><value>Часы</value></synonym>
-      <type><types>Number</types><numberQualifiers><precision>10</precision><scale>2</scale></numberQualifiers></type>
+      <synonym>
+        <key>ru</key>
+        <value>Часы</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="53f116bf-62e3-4a8d-835f-31e75422d35f">
       <name>ВКМ_СтоимостьЧаса</name>
-      <synonym><key>ru</key><value>Стоимость часа</value></synonym>
-      <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+      <synonym>
+        <key>ru</key>
+        <value>Стоимость часа</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="9e4cbd5c-ef37-4ae8-ac8e-f6ab7f3f7d9b">
       <name>ВКМ_Сумма</name>
-      <synonym><key>ru</key><value>Сумма</value></synonym>
-      <type><types>Number</types><numberQualifiers><precision>15</precision><scale>2</scale></numberQualifiers></type>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="7e1a35c6-0f58-4122-d365-4a2c9e8f1b50">
       <name>ВКМ_ОписаниеРабот</name>
-      <synonym><key>ru</key><value>Описание работ</value></synonym>
-      <type><types>String</types><stringQualifiers/></type>
+      <synonym>
+        <key>ru</key>
+        <value>Описание работ</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="8f2b46d7-1069-4233-e476-5b3d0f9a2c61">
       <name>ВКМ_ФактическиПотраченоЧасов</name>
-      <synonym><key>ru</key><value>Фактически потрачено часов</value></synonym>
-      <type><types>Number</types><numberQualifiers><precision>10</precision><scale>2</scale></numberQualifiers></type>
+      <synonym>
+        <key>ru</key>
+        <value>Фактически потрачено часов</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
     <attributes uuid="9a3c57e8-2170-4344-f587-6c4e1a0b3d72">
       <name>ВКМ_ЧасыКОплатеКлиенту</name>
-      <synonym><key>ru</key><value>Часы к оплате клиенту</value></synonym>
-      <type><types>Number</types><numberQualifiers><precision>10</precision><scale>2</scale></numberQualifiers></type>
+      <synonym>
+        <key>ru</key>
+        <value>Часы к оплате клиенту</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
   </tabularSections>
 </mdclass:Document>

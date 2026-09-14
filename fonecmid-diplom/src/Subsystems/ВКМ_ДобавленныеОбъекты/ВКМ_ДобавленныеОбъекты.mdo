@@ -9,10 +9,18 @@
   <includeInCommandInterface>false</includeInCommandInterface>
   <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
   <content>CommonModule.ВКМ_ОбслуживаниеКлиентов</content>
+  <content>CommonModule.ВКМ_РасчетЗарплаты</content>
   <content>ScheduledJob.ВКМ_УведомленияПоОбслуживанию</content>
   <content>InformationRegister.ВКМ_ПланОтпусковСотрудников</content>
   <content>InformationRegister.ВКМ_МаршрутизацияTelegramКонтрагентов</content>
   <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
+  <content>InformationRegister.ВКМ_ГрафикиРаботы</content>
+  <content>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</content>
+  <content>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</content>
+  <content>ChartOfCalculationTypes.ВКМ_Удержания</content>
+  <content>CalculationRegister.ВКМ_ОсновныеНачисления</content>
+  <content>CalculationRegister.ВКМ_ДополнительныеНачисления</content>
+  <content>CalculationRegister.ВКМ_Удержания</content>
   <content>Document.ВКМ_ОбслуживаниеКлиента</content>
   <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
   <content>Catalog.ВКМ_УведомленияТелеграмБоту</content>
@@ -20,12 +28,11 @@
   <content>Document.ВКМ_НачислениеФиксированнойПремии</content>
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
   <content>Document.ВКМ_ГрафикОтпусков</content>
-  <content>AccumulationRegister.ВКМ_НачисленияСотрудников</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
+  <content>AccumulationRegister.ВКМ_ВыставленныеКлиентуРаботы</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
   <content>Report.ВКМ_АнализОбслуживанияКлиентов</content>
-  <content>Report.ВКМ_НачисленияСотрудников</content>
   <content>Report.ВКМ_ВыработкаСпециалистов</content>
   <content>Report.ВКМ_РасчетыССотрудниками</content>
   <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>

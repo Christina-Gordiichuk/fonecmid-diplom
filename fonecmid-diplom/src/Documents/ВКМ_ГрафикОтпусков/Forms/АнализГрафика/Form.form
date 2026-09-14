@@ -7,11 +7,43 @@
   <items xsi:type="form:FormField">
     <name>ДиаграммаГанта</name>
     <id>1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
     <dataPath xsi:type="form:DataPath">
       <segments>ДиаграммаГанта</segments>
     </dataPath>
+    <titleLocation>None</titleLocation>
+    <extendedTooltip>
+      <name>ДиаграммаГантаРасширеннаяПодсказка</name>
+      <id>3</id>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ДиаграммаГантаКонтекстноеМеню</name>
+      <id>2</id>
+      <autoFill>true</autoFill>
+    </contextMenu>
     <type>GanttChartField</type>
-    <extInfo xsi:type="form:GanttChartFieldExtInfo"/>
+    <editMode>Enter</editMode>
+    <showInHeader>true</showInHeader>
+    <headerHorizontalAlign>Left</headerHorizontalAlign>
+    <showInFooter>true</showInFooter>
+    <extInfo xsi:type="form:GanttChartFieldExtInfo">
+      <width>100</width>
+      <autoMaxWidth>false</autoMaxWidth>
+      <height>20</height>
+      <autoMaxHeight>false</autoMaxHeight>
+      <horizontalStretch>true</horizontalStretch>
+      <verticalStretch>true</verticalStretch>
+    </extInfo>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
@@ -23,9 +55,15 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
-  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <width>100</width>
+  <height>30</height>
+  <windowOpeningMode>Independent</windowOpeningMode>
+  <autoTitle>false</autoTitle>
+  <commandBarLocation>None</commandBarLocation>
   <autoUrl>true</autoUrl>
   <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
   <showTitle>true</showTitle>
   <showCloseButton>true</showCloseButton>
@@ -41,15 +79,18 @@
     <edit>
       <common>true</common>
     </edit>
+    <extInfo xsi:type="form:GanttChartExtInfo"/>
   </attributes>
   <parameters>
     <name>АдресДанныхГрафика</name>
     <valueType>
       <types>String</types>
-      <stringQualifiers>
-        <length>0</length>
-      </stringQualifiers>
+      <stringQualifiers/>
     </valueType>
   </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
   <extInfo xsi:type="form:FormExtInfo"/>
 </form:Form>

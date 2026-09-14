@@ -237,7 +237,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Список.СуммаДокумента</segments>
+        <segments>Список.ВКМ_СуммаДокумента</segments>
       </dataPath>
       <extendedTooltip>
         <name>СуммаДокументаРасширеннаяПодсказка</name>
